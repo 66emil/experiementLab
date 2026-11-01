@@ -1,0 +1,23 @@
+[project]
+name = "experimentlab-api"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "sqlalchemy>=2.0,<3",
+  "alembic>=1.15,<2",
+  "pydantic-settings>=2.8,<3",
+  "psycopg[binary]>=3.2,<4",
+  "experimentlab-statistics",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/experimentlab"]
+
+[tool.uv.sources]
+experimentlab-statistics = { workspace = true }

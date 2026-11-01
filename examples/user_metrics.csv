@@ -1,0 +1,7 @@
+user_id,variant,metric_value
+u001,control,0
+u002,treatment,1
+u003,control,1
+u004,treatment,0
+u005,control,0
+u006,treatment,1

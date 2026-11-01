@@ -1,0 +1,27 @@
+{
+  "name": "experimentlab",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/web"],
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "concurrently --kill-others -n api,web -c cyan,green \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:web": "npm run dev --workspace @experimentlab/web",
+    "dev:api": ".venv/bin/uvicorn experimentlab.main:app --app-dir backend/src --reload --reload-dir backend/src --reload-dir packages/statistics/src --host 127.0.0.1 --port 8000",
+    "build": "npm run build --workspace @experimentlab/web",
+    "typecheck": "npm run typecheck --workspace @experimentlab/web",
+    "format": "prettier --write apps/web/src apps/web/vite.config.ts",
+    "format:check": "prettier --check apps/web/src apps/web/vite.config.ts",
+    "api:export": ".venv/bin/python scripts/export_openapi.py",
+    "api:types": "npm run api:export && openapi-typescript docs/openapi.json -o apps/web/src/shared/api/schema.d.ts",
+    "db:migrate": ".venv/bin/alembic -c backend/alembic.ini upgrade head",
+    "db:seed": ".venv/bin/python -m experimentlab.seed",
+    "test:api": ".venv/bin/pytest",
+    "check": "npm run typecheck && npm run build && npm run test:api"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "concurrently": "^9.2.1",
+    "openapi-typescript": "^7.10.1"
+  }
+}

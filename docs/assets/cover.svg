@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#103F34"/><stop offset="1" stop-color="#1D6652"/></linearGradient>
+    <linearGradient id="line" x1="1060" y1="300" x2="1460" y2="150" gradientUnits="userSpaceOnUse"><stop stop-color="#B6DDCB"/><stop offset="1" stop-color="#E4F2C0"/></linearGradient>
+  </defs>
+  <rect width="1600" height="480" rx="24" fill="url(#bg)"/>
+  <g opacity=".12" stroke="#D5EBDE"><path d="M1000 60V420M1100 60V420M1200 60V420M1300 60V420M1400 60V420M1500 60V420M960 100H1540M960 200H1540M960 300H1540M960 400H1540"/></g>
+  <rect x="80" y="69" width="66" height="66" rx="18" fill="#E9F3EC"/>
+  <path d="M100 85H126M107 85V102L94 123H132L119 102V85M101 113H125" stroke="#185B4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="166" y="111" fill="#E8F4EC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="18" letter-spacing="5">PRODUCT EXPERIMENTATION</text>
+  <text x="78" y="235" fill="#F6FAF6" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="82" font-weight="650" letter-spacing="-3">Experiment<tspan fill="#B4D3C1" font-weight="350">Lab</tspan></text>
+  <text x="83" y="290" fill="#C5DDCF" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="25">От гипотезы к обоснованному решению.</text>
+  <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="14" letter-spacing="2">
+    <rect x="83" y="345" width="135" height="40" rx="20" stroke="#719D87"/><text x="113" y="371" fill="#E2EFE5">DESIGN</text>
+    <path d="M234 365H262M254 358L262 365L254 372" stroke="#8BB39C" stroke-width="1.5"/>
+    <rect x="278" y="345" width="152" height="40" rx="20" stroke="#719D87"/><text x="303" y="371" fill="#E2EFE5">VALIDATE</text>
+    <path d="M446 365H474M466 358L474 365L466 372" stroke="#8BB39C" stroke-width="1.5"/>
+    <rect x="490" y="345" width="152" height="40" rx="20" stroke="#719D87"/><text x="518" y="371" fill="#E2EFE5">ANALYZE</text>
+  </g>
+  <rect x="986" y="95" width="496" height="286" rx="22" fill="#EEF6EF" fill-opacity=".06" stroke="#C4DDCD" stroke-opacity=".3"/>
+  <circle cx="1013" cy="120" r="4" fill="#91BCA2"/><circle cx="1029" cy="120" r="4" fill="#91BCA2" fill-opacity=".5"/><circle cx="1045" cy="120" r="4" fill="#91BCA2" fill-opacity=".3"/>
+  <path d="M1020 341H1450M1020 175H1450M1020 230H1450M1020 285H1450" stroke="#A4CAB3" stroke-opacity=".18"/>
+  <path d="M1024 319L1080 293L1137 303L1193 256L1248 269L1304 223L1361 236L1426 196" stroke="#81B79C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1024 320L1080 307L1137 276L1193 285L1248 232L1304 245L1361 182L1426 153" stroke="url(#line)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1426" cy="153" r="7" fill="#E0EDBE" stroke="#1D6652" stroke-width="3"/>
+  <rect x="1063" y="355" width="99" height="45" rx="12" fill="#F2F7ED"/>
+  <text x="1094" y="385" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="23" font-weight="600" fill="#245440">A</text>
+  <rect x="1180" y="355" width="99" height="45" rx="12" fill="#B9D8BF"/>
+  <text x="1212" y="385" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="23" font-weight="600" fill="#245440">B</text>
+  <text x="1464" y="438" text-anchor="end" fill="#A7CDB5" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="3">PLAN · DATA · UNCERTAINTY</text>
+</svg>

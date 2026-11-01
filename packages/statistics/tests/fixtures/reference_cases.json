@@ -1,0 +1,34 @@
+{
+  "proportions": [
+    {
+      "source": "statsmodels 0.15.0: proportions_ztest + confint_proportions_2indep(method='newcomb')",
+      "control": [5, 83], "treatment": [12, 99], "alpha": 0.05,
+      "statistic": 1.4078304151258787, "p_value": 0.15918129181156992,
+      "ci": [-0.027909954665286396, 0.14688264097875414]
+    },
+    {
+      "source": "statsmodels 0.15.0, independent reference invocation",
+      "control": [56, 70], "treatment": [48, 80], "alpha": 0.05,
+      "statistic": -2.6501719512585336, "p_value": 0.008045081368196563,
+      "ci": [-0.33387265403690614, -0.05243147240236498]
+    },
+    {
+      "source": "statsmodels 0.15.0, independent reference invocation",
+      "control": [10, 100], "treatment": [20, 100], "alpha": 0.05,
+      "statistic": 1.9802950859533488, "p_value": 0.047670380656161394,
+      "ci": [0.00014902511855761913, 0.19947387007806955]
+    }
+  ],
+  "welch_r": {
+    "source": "R t.test(a,b,var.equal=FALSE); published in SciPy TestTTestIndMore.test_ttest_ind_with_uneq_var; sign reversed to treatment-control",
+    "control": [1.0, 2.0, 3.0], "treatment": [1.1, 2.9, 4.2],
+    "statistic": 0.686495127355726265, "p_value": 0.53619490753126686
+  },
+  "welch_ci_r": {
+    "source": "R PairedData::yuen.t.test(tr=0,conf.level=0.9), published in SciPy TestTTestCI; rounded reference inputs, direction reversed",
+    "control": [0.88236329,0.97318744,0.4549262,0.97893335,0.0606677,0.44013366,0.55806018,0.40151434,0.14453315,0.25860601,0.20202162],
+    "treatment": [0.93455277,0.42680603,0.49751939,0.14152846,0.711435,0.77669667,0.20507578,0.78702772,0.94691855,0.32464958,0.3873582,0.35187468,0.21731811],
+    "alpha": 0.1, "statistic": 0.2314607, "p_value": 0.8193209,
+    "degrees_of_freedom": 19.894435, "ci": [-0.188729943, 0.247220294]
+  }
+}

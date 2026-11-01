@@ -1,0 +1,45 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Application, API and statistics
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv sync --frozen
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Check Python code
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+      - name: Check frontend formatting
+        run: npm run format:check
+      - name: TypeScript, production build and tests
+        run: npm run check
+      - name: Verify generated API contract
+        run: |
+          npm run api:types
+          git diff --exit-code -- docs/openapi.json apps/web/src/shared/api/schema.d.ts
+      - name: Verify migrations on a clean database
+        run: |
+          npm run db:migrate
+          uv run alembic -c backend/alembic.ini check
+          npm run db:seed
+          npm run db:seed
