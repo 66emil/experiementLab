@@ -349,6 +349,44 @@ nav a > span {
   color: #9aa69f;
   font-size: 10px;
 }
+.sidebar-navigation {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #d8e3da transparent;
+}
+.brand,
+.workspace-label,
+.sidebar-bottom {
+  flex-shrink: 0;
+}
+.preview-nav-label {
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+.preview-nav-label small {
+  font-size: 7px;
+  color: #9d885f;
+  background: #f6f3e9;
+  padding: 4px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.6px;
+}
+.preview-navigation {
+  gap: 3px;
+}
+.preview-navigation a {
+  font-size: 11px;
+  padding-block: 10px;
+}
+.preview-navigation a.active {
+  background: #f2f3e8;
+  color: #6f7d47;
+}
 .connection-dot {
   display: inline-block;
   width: 6px;
@@ -972,6 +1010,19 @@ dd {
   .nav-label,
   .sidebar-bottom {
     display: none;
+  }
+  .sidebar-navigation {
+    overflow-y: visible;
+  }
+  .preview-nav-label {
+    display: flex;
+    margin: 10px 10px 0;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 8px;
+  }
+  .preview-navigation {
+    margin-top: 6px;
   }
   nav {
     display: flex;

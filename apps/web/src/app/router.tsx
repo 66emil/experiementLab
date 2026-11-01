@@ -8,7 +8,6 @@ import { ExperimentDetailPage } from '../pages/ExperimentDetailPage';
 import { AnalysisPage } from '../pages/AnalysisPage';
 import { PlanningPage } from '../pages/PlanningPage';
 import { HealthPage } from '../pages/HealthPage';
-import { ModulePage } from '../pages/ModulePage';
 import { DataPage } from '../pages/DataPage';
 
 function RouteError() {
@@ -39,7 +38,12 @@ export const router = createBrowserRouter([
       { path: 'planning', element: <PlanningPage /> },
       { path: 'data', element: <DataPage /> },
       { path: 'health', element: <HealthPage /> },
-      { path: 'reports', element: <ModulePage module="reports" /> },
+      { path: 'preview', lazy: () => import('../features/preview/PreviewOverviewPage') },
+      { path: 'preview/runs', lazy: () => import('../features/preview/RunPreviewPage') },
+      { path: 'preview/analytics', lazy: () => import('../features/preview/AnalyticsPreviewPage') },
+      { path: 'reports', lazy: () => import('../features/preview/ReportPreviewPage') },
+      { path: 'preview/bootstrap', lazy: () => import('../features/preview/BootstrapPreviewPage') },
+      { path: 'preview/cuped', lazy: () => import('../features/preview/CupedPreviewPage') },
       {
         path: '*',
         element: (

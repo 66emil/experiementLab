@@ -81,6 +81,9 @@ export function ExperimentDetailPage() {
           <Link className="text-link" to={`/data?experiment=${item.id}`}>
             Открыть данные →
           </Link>
+          <Link className="text-link" to="/preview/runs">
+            История анализов · UI Preview ↗
+          </Link>
         </div>
         {item.status === 'draft' && item.start_issues.length ? (
           <div className="start-requirements">

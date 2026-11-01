@@ -8,7 +8,15 @@ const navigation = [
   ['/analysis', '⌁', 'Анализ'],
   ['/planning', '◇', 'Планирование'],
   ['/health', '◎', 'Качество данных'],
-  ['/reports', '▧', 'Отчёты'],
+];
+
+const previewNavigation = [
+  ['/preview', '◇', 'Следующие этапы'],
+  ['/preview/runs', '↻', 'История запусков'],
+  ['/preview/analytics', '⌁', 'Analytics Dashboard'],
+  ['/reports', '▧', 'Отчёт эксперимента'],
+  ['/preview/bootstrap', '⋮', 'Bootstrap'],
+  ['/preview/cuped', '⋈', 'CUPED'],
 ];
 
 export function Layout() {
@@ -41,15 +49,28 @@ export function Layout() {
             Рабочее пространство<small>Продуктовая аналитика</small>
           </div>
         </div>
-        <p className="nav-label">ПЛАТФОРМА</p>
-        <nav aria-label="Основная навигация">
-          {navigation.map(([path, icon, label]) => (
-            <NavLink key={path} to={path} end={path === '/'}>
-              <span aria-hidden="true">{icon}</span>
-              {label}
-            </NavLink>
-          ))}
-        </nav>
+        <div className="sidebar-navigation">
+          <p className="nav-label">ПЛАТФОРМА</p>
+          <nav aria-label="Основная навигация">
+            {navigation.map(([path, icon, label]) => (
+              <NavLink key={path} to={path} end={path === '/'}>
+                <span aria-hidden="true">{icon}</span>
+                {label}
+              </NavLink>
+            ))}
+          </nav>
+          <p className="nav-label preview-nav-label">
+            СЛЕДУЮЩИЕ ЭТАПЫ <small>PREVIEW</small>
+          </p>
+          <nav aria-label="Предпросмотр будущих модулей" className="preview-navigation">
+            {previewNavigation.map(([path, icon, label]) => (
+              <NavLink key={path} to={path} end>
+                <span aria-hidden="true">{icon}</span>
+                {label}
+              </NavLink>
+            ))}
+          </nav>
+        </div>
         <div className="sidebar-bottom">
           <span className={`connection-dot ${api.isSuccess ? 'online' : ''}`} />
           {api.isPending
